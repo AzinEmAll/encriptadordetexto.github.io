@@ -1,0 +1,285 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#logo {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    width: 120px;
+    height: 48px;
+}
+
+#top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #2A3132;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: -15%;
+    width: 130%;
+    height: 100px;
+    background-color: #336B87;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#titulo-encriptador {
+    position: absolute;
+    top: 40px;
+    left: 23%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #336B87;
+    text-align: center;
+}
+
+#subtitulo {
+    position: absolute;
+    top: 95px;
+    left: 23%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2A3132;
+    text-align: center;
+}
+
+#instrucciones {
+    position: absolute;
+    top: 170px;
+    left: 18%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    color: #000000;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+#input-text {
+    position: absolute;
+    top: 100px;
+    right: 1150px;
+    width: calc(100% - 100px);
+    max-width: 500px;
+    height: 500px;
+    margin: 100px 0;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#button-images {
+    position: absolute;
+    top: 785px;
+    right: 1060px;
+    width: 680px;
+    height: 67px;
+    background-image: url('imagenes/Frame\ 3.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#encrypt-btn, #decrypt-btn {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+#encrypt-btn {
+    left: 0;
+}
+
+#decrypt-btn {
+    right: 0;
+}
+
+#output-text {
+    position: absolute;
+    top: 100px;
+    right: 550px;
+    width: calc(100% - 100px);
+    max-width: 500px;
+    height: 500px;
+    margin: 100px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-height: 50px;
+    background-color: #f9f9f9;
+    word-wrap: break-word;
+}
+
+#copy-btn {
+    position: absolute;
+    top: 740px;
+    left: 1000px;
+    background-color: #28a745;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#copy-btn:hover {
+    background-color: #218838;
+}
+
+#background-image {
+    position: absolute;
+    top: 70px;
+    left: 1400px;
+    width: 448px;
+    height: 800px;
+    z-index: 1;
+}
+
+#person-diamond {
+    position: absolute;
+    top: 50%;
+    right: 150px;
+    width: 336px;
+    height: 305px;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+#github-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+}
+
+#github-btn img {
+    width: 100%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+#footer {
+    position: fixed;
+    bottom: 35px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+}
+
+#footer-text {
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+    #logo {
+        top: 10px;
+        left: 10px;
+        width: 100px;
+        height: 40px;
+    }
+
+    #titulo-encriptador {
+        top: 20px;
+        left: 50%;
+        font-size: 1.8rem;
+        transform: translateX(-50%);
+    }
+
+    #subtitulo {
+        top: 60px;
+        left: 50%;
+        font-size: 1.2rem;
+        transform: translateX(-50%);
+    }
+
+    #instrucciones {
+        top: 100px;
+        left: 50%;
+        font-size: 0.9rem;
+        transform: translateX(-50%);
+        max-width: 90%;
+    }
+
+    #input-text, #output-text {
+        top: 150px;
+        right: 5%;
+        width: 90%;
+        max-width: none;
+        height: 200px;
+        font-size: 16px;
+    }
+
+    #button-images {
+        top: 380px;
+        right: 5%;
+        width: 90%;
+        height: 50px;
+    }
+
+    #copy-btn {
+        top: 450px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        padding: 10px;
+    }
+
+    #background-image, #person-diamond {
+        display: none;
+    }
+
+    #bottom-bar {
+        left: 0;
+        width: 100%;
+    }
+
+    #footer {
+        bottom: 10px;
+        left: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #footer-text {
+        font-size: 16px;
+    }
+
+    #github-btn {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+    }
+}
